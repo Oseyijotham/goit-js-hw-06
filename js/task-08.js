@@ -6,12 +6,16 @@ let formData;
 
 
 form.addEventListener("submit", event => {
-  console.log("Submitted");
+  
   event.preventDefault();
 
-  if (event.currentTarget.elements.email.value === "" || event.currentTarget.elements.password.value === "") {
+  if (event.currentTarget.elements.email.value.trim() === "" || event.currentTarget.elements.password.value.trim() === "") {
+    console.log("Please fill in all the fields!");
     alert("Please fill in all the fields!");
   }
+
+  else { console.log("Submitted"); }
+
   event.currentTarget.reset();
 });
 
