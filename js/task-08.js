@@ -6,6 +6,7 @@ let formData;
 
 
 form.addEventListener("submit", event => {
+  console.log("Submitted");
   event.preventDefault();
 
   if (event.currentTarget.elements.email.value === "" || event.currentTarget.elements.password.value === "") {
@@ -16,12 +17,12 @@ form.addEventListener("submit", event => {
 
 usernameInput.addEventListener("input", event => {
 
-  formData = { [event.currentTarget.name]: event.currentTarget.value };
+  formData = { [event.currentTarget.name]: event.currentTarget.value.trim() };
 
 })
 
 passwordInput.addEventListener("input", event => {
-  formData = { ...formData, [event.currentTarget.name]: event.currentTarget.value };
+  formData = { ...formData, [event.currentTarget.name]: event.currentTarget.value.trim() };
   console.log(formData);
 })
 
