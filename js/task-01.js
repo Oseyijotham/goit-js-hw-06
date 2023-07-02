@@ -41,15 +41,16 @@ numberOfCategories.after(firstCategoryList)
 
 // Creating a new element (<li></li>) and linking it to the variable "firstCategory"
 const firstCategory = document.createElement('li');
-//Adding the created (<li></li>) "firstCategory" tag to (<ul></ul>) tag "firstCategoryList"
+//Adding the created (<li></li>) tag "firstCategory" to (<ul></ul>) tag "firstCategoryList"
 firstCategoryList.append(firstCategory);
 const firstCategoryParent = document.querySelector(".item")
 const firstCategoryElement = firstCategoryParent.querySelector('h2');
 const firstCategoryValue = firstCategoryElement.textContent
 firstCategory.textContent = `Category: ${firstCategoryValue}`
 console.log(firstCategory.textContent)
-// Creating another (<li></li>) and linking it to the variable firstCategory
+// Creating another (<li></li>) and linking it to the variable firstElements
 const firstElements = document.createElement('li')
+//Adding the created (<li></li>) tag "firstElements" to (<ul></ul>) tag "firstCategoryList"
 firstCategoryList.append(firstElements);
 const totalFirstCategoryElements = `Elements: ${firstCategoryParent.querySelectorAll("li").length}`
 firstElements.textContent = totalFirstCategoryElements 
@@ -61,7 +62,7 @@ firstCategoryList.after(secondCategoryList);
 
 // Creating a new element (<li></li>) and linking it to the variable "secondCategory"
 const secondCategory = document.createElement('li');
-//Adding the created (<li></li>) "secondCategory" tag to (<ul></ul>) tag "secondCategoryList"
+//Adding the created (<li></li>) tag "secondCategory" to (<ul></ul>) tag "secondCategoryList"
 secondCategoryList.append(secondCategory);
 const secondCategoryParent = document.querySelectorAll(".item")[1];
 const secondCategoryElement = secondCategoryParent.querySelector('h2');
@@ -69,20 +70,21 @@ const secondCategoryValue = secondCategoryElement.textContent
 secondCategory.textContent = `Category: ${secondCategoryValue}`
 console.log(secondCategory.textContent)
 
-// Creating another (<li></li>) and linking it to the variable firstCategory
+// Creating another (<li></li>) and linking it to the variable secondElements
 const secondElements = document.createElement('li')
+//Adding the created (<li></li>) tag "secondElements" to (<ul></ul>) tag "secondCategoryList"
 secondCategoryList.append(secondElements);
 const totalSecondCategoryElements = `Elements: ${secondCategoryParent.querySelectorAll("li").length}`
 secondElements.textContent = totalSecondCategoryElements 
 console.log(secondElements.textContent);
 
-//Creating a new element (<ul></ul>) and linking it to the variable "secondCategoryList"
+//Creating a new element (<ul></ul>) and linking it to the variable "thirdCategoryList"
 const thirdCategoryList = document.createElement('ul');
 secondCategoryList.after(thirdCategoryList);
 
-// Creating a new element (<li></li>) and linking it to the variable "secondCategory"
+// Creating a new element (<li></li>) and linking it to the variable "thirdCategory"
 const thirdCategory = document.createElement('li');
-//Adding the created (<li></li>) "secondCategory" tag to (<ul></ul>) tag "secondCategoryList"
+//Adding the created (<li></li>) tag "thirdCategory" to (<ul></ul>) tag "thirdCategoryList"
 thirdCategoryList.append(thirdCategory);
 const thirdCategoryParent = document.querySelectorAll(".item")[2];
 const thirdCategoryElement = thirdCategoryParent.querySelector('h2');
@@ -90,8 +92,9 @@ const thirdCategoryValue = thirdCategoryElement.textContent
 thirdCategory.textContent = `Category: ${thirdCategoryValue}`
 console.log(thirdCategory.textContent)
 
-// Creating another (<li></li>) and linking it to the variable firstCategory
+// Creating another (<li></li>) and linking it to the variable thirdCategory
 const thirdElements = document.createElement('li')
+//Adding the created (<li></li>) tag "thirdElements" to (<ul></ul>) tag "thirdCategoryList"
 thirdCategoryList.append(thirdElements);
 const totalthirdCategoryElements = `Elements: ${thirdCategoryParent.querySelectorAll("li").length}`
 thirdElements.textContent = totalthirdCategoryElements 
